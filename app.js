@@ -20,9 +20,9 @@ app.use(helmet())
 app.use(morgan("common"))
 
 //api route
-app.use(userRoutes)
-app.use(authRoutes)
-app.use(postRoutes)
+app.use("/api/users",userRoutes)
+app.use("/api/auth",authRoutes)
+app.use("/api/posts",postRoutes)
 
 //runner server
 mongoose.connect(process.env.MONGOO_URL, options)

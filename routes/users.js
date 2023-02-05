@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-router.get("/api/v1/user", (req, res)=>{
+router.get("/user", (req, res)=>{
     res.send("this users endpoint!")
 })
 
