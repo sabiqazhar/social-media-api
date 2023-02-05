@@ -18,7 +18,7 @@ const register = async (req, res) => {
     const emailCheck = await userModel.findOne({email: body.email})
 
     if (usernameCheck || emailCheck) {
-        return res.status(401).json({
+        return res.status(403).json({
             message: 'Username or Email already use'
         })
     }
@@ -38,7 +38,7 @@ const register = async (req, res) => {
             data: userSave
         })
     } catch (error) {
-        res.status(500).json(err)
+        res.status(500).json(error)
     }
 }
 
@@ -46,7 +46,7 @@ const login = async (req, res) => {
     const body = req.body
 
     try {
-        const user = await UserModel.findOne({username: body.username})
+        const user = await userModel.findOne({username: body.username})
         if(!user) {
             return res.status(400).json({
                 status: 400,
@@ -68,7 +68,7 @@ const login = async (req, res) => {
             data: user
         })
     } catch (error) {
-        res.status(500).json(err)
+        res.status(500).json(error)
     }
 }
 
