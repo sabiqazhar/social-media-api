@@ -1,7 +1,12 @@
 const router = require('express').Router()
+const bodyParser = require('body-parser')
 
-router.get("/user", (req, res)=>{
-    res.send("this users endpoint!")
-})
+const {getUser, deleteUser, updateUser} = require('../controllers/users')
+
+const jsonParser = bodyParser.json()
+
+router.get("/:id", getUser)
+router.put("/:id", jsonParser, updateUser)
+router.delete("/:id", jsonParser, deleteUser)
 
 module.exports = router
