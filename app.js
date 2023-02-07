@@ -14,6 +14,9 @@ const options = {useNewUrlParser: true, useUnifiedTopology: true}
 
 dotenv.config()
 
+const atlas = process.env.MONGOO_URL
+// const local = "mongodb://localhost:27017/socialmed-api"
+
 //midleware
 app.use(express.json())
 app.use(helmet())
@@ -25,7 +28,7 @@ app.use("/api/auth",authRoutes)
 app.use("/api/posts",postRoutes)
 
 //runner server
-mongoose.connect(process.env.MONGOO_URL, options)
+mongoose.connect(atlas, options)
  .then(()=>{
     app.listen(PORT, ()=>{
         console.log(`server has running at http://localhost:${PORT}`);
