@@ -13,22 +13,22 @@ const updateUser = async (req, res) => {
                     message: error
                 })
             }
+        }
 
-            try {
-                const user = await userModel.findByIdAndUpdate(req.params.id, {
-                    $set: req.body,
-                })
-                return res.status(200).json({
-                    status: 200,
-                    message: "Account has been updated!",
-                    data: user
-                })
-            } catch (error) {
-                return res.status(500).json({
-                    status: 500,
-                    message: error
-                })
-            }
+        try {
+            const user = await userModel.findByIdAndUpdate(req.params.id, {
+                $set: req.body,
+            })
+            return res.status(200).json({
+                status: 200,
+                message: "Account has been updated!",
+                data: user
+            })
+        } catch (error) {
+            return res.status(500).json({
+                status: 500,
+                message: error
+            })
         }
     } else {
         return res.status(403).json({

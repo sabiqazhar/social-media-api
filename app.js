@@ -15,7 +15,7 @@ const options = {useNewUrlParser: true, useUnifiedTopology: true}
 dotenv.config()
 
 const atlas = process.env.MONGOO_URL
-// const local = "mongodb://localhost:27017/socialmed-api"
+// const local = "mongodb://127.0.0.1:27017/sosmedapi"
 
 //midleware
 app.use(express.json())
@@ -23,9 +23,9 @@ app.use(helmet())
 app.use(morgan("common"))
 
 //api route
-app.use("/api/users",userRoutes)
+app.use("/api/user",userRoutes)
 app.use("/api/auth",authRoutes)
-app.use("/api/posts",postRoutes)
+app.use("/api/post",postRoutes)
 
 //runner server
 mongoose.connect(atlas, options)
