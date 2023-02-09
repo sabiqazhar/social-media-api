@@ -1,6 +1,8 @@
 const userModel = require('../models/user')
 const bcrypt = require('bcrypt')
 
+
+//resgist user
 const register = async (req, res) => {
     const body = req.body
 
@@ -42,6 +44,7 @@ const register = async (req, res) => {
     }
 }
 
+//login user
 const login = async (req, res) => {
     const body = req.body
 
