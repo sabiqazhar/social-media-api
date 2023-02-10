@@ -1,5 +1,5 @@
 
-# REST API Todo list
+# REST API SOCIAL MEDIA
 
 this is social media API project, i'm implement some concept on common social media like follow/unfollow user, like/dislike post and create timeline for user
 
