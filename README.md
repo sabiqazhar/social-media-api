@@ -1,5 +1,5 @@
 
-# REST API SOCIAL MEDIA
+# REST API SOCIAL MEDIA 🤳
 
 this is social media API project, i'm implement some concept on common social media like follow/unfollow user, like/dislike post and create timeline for user
 
@@ -10,7 +10,7 @@ In this backend project, we use tech stacks:
 - MongoDB Atlas
 
 
-## Before running
+## Before running 🧪
 
 - Setup the database local, you can read stuff for install mongo in [here](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/) (for windows, mac and linux) and [here](https://www.linode.com/docs/guides/set-up-mongodb-on-docker/) (for docker)
 
@@ -19,7 +19,7 @@ In this backend project, we use tech stacks:
 - if you choose database at atlas mongoo, add and edit  .env adjust your mongoo atlas account
 
 
-## Run Locally
+## Run Locally 🚀
 
 Clone the project
 
@@ -46,9 +46,9 @@ Start the server
 ```
 
 
-## Features
+## Features ✨
 
-#### Post route
+#### Post route 
 - ✔️PASSED // POST Create post
 - ✔️PASSED // PUT Update post
 - ✔️PASSED // DELETE Delete post
